@@ -21,7 +21,7 @@ export class News extends Component {
     this.state = {
       articles: [],
       loading: false,
-      page: 1,
+      page: 0,
     };
   }
 
@@ -40,18 +40,18 @@ export class News extends Component {
   handleprevclick = async () => {
     let url = `https://newsapi.org/v2/top-headlines?country=${
       this.props.country
-    }&category=${
+    }&page=${this.state.page - 1}&category=${
       this.props.category
-    }&apiKey=dbe57b028aeb41e285a226a94865f7a7&page=${
-      this.state.page - 1
-    }&pageSize=${this.props.pageSize}`;
+    }&apiKey=8966cfb813eb458d9a3b432600a79451&page=1&pageSize=${
+      this.props.pageSize
+    }`;
     this.setState({ loading: true });
     let data = await fetch(url);
-    let parsedData = await data.json();
-    console.log(parsedData);
+    let parsedata = await data.json();
+    console.log(parsedata);
     this.setState({
       page: this.state.page - 1,
-      articles: parsedData.articles,
+      articles: parsedata.articles,
       loading: false,
     });
   };
@@ -98,6 +98,9 @@ export class News extends Component {
                   discription={element.description ? element.description : ""}
                   imgUrl={element.urlToImage}
                   newsUrl={element.url}
+                  author={element.author}
+                  date={element.publishedAt}
+                  source={element.source.name}
                 />
               </div>
             );

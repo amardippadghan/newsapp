@@ -2,10 +2,12 @@ import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, discription, imgUrl, newsUrl } = this.props;
+    let { title, discription, imgUrl, newsUrl, author, date, source } =
+      this.props;
 
     return (
       <div className="my-3">
+        <span class="badge badge-pill badge-danger">source : {source}</span>
         <div className="card">
           <img
             src={
@@ -27,6 +29,9 @@ export class NewsItem extends Component {
             >
               Read more
             </a>
+            <p className="card-text">published by {author}</p>
+
+            <p className="card-text">on {new Date(date).toGMTString()}</p>
           </div>
         </div>
       </div>

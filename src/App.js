@@ -14,11 +14,10 @@ export default class App extends Component {
           <Navbar />
           <Routes>
             <Route
-              path="/home"
+              path="/"
               element={<News pageSize={6} country="in" category="general" />}
-            >
-              {" "}
-            </Route>
+            />
+
             <Route
               path="/business"
               element={
@@ -26,9 +25,8 @@ export default class App extends Component {
                   <News pageSize={6} country="in" category="businees" />
                 </>
               }
-            >
-              {" "}
-            </Route>
+            />
+
             <Route
               path="/science"
               element={
@@ -36,9 +34,8 @@ export default class App extends Component {
                   <News pageSize={6} country="in" category="science" />
                 </>
               }
-            >
-              {" "}
-            </Route>
+            />
+
             <Route
               path="/health"
               element={
@@ -46,9 +43,8 @@ export default class App extends Component {
                   <News pageSize={6} country="in" category="health" />
                 </>
               }
-            >
-              {" "}
-            </Route>
+            />
+
             <Route
               path="/entertainment"
               element={
@@ -56,9 +52,8 @@ export default class App extends Component {
                   <News pageSize={6} country="in" category="entertainment" />
                 </>
               }
-            >
-              {" "}
-            </Route>
+            />
+
             <Route
               path="/sports"
               element={
@@ -66,9 +61,8 @@ export default class App extends Component {
                   <News pageSize={6} country="in" category="sports" />
                 </>
               }
-            >
-              {" "}
-            </Route>
+            />
+
             <Route
               path="/technology"
               element={
@@ -76,9 +70,7 @@ export default class App extends Component {
                   <News pageSize={6} country="in" category="technology" />
                 </>
               }
-            >
-              {""}
-            </Route>
+            />
           </Routes>
         </Router>
       </div>
