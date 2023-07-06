@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { Navbar } from "./components/Navbar";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 export default class App extends Component {
   render() {
@@ -13,12 +14,8 @@ export default class App extends Component {
           <Navbar />
           <Routes>
             <Route
-              path="/"
-              element={
-                <>
-                  <News pageSize={6} country="in" category="general" />
-                </>
-              }
+              path="/home"
+              element={<News pageSize={6} country="in" category="general" />}
             >
               {" "}
             </Route>

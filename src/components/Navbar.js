@@ -5,7 +5,7 @@ export class Navbar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/home">
             CurrentNews
           </Link>
           <button
@@ -22,41 +22,35 @@ export class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/">
-                  Home <span className="sr-only">(current)</span>
-                </Link>
-              </li>
-
               <li className="nav-item">
                 <Link className="nav-link" to="/business">
-                  business
+                  Business
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/entertainment">
-                  entertainment
+                  Entertainment
                 </Link>
               </li>
 
               <li className="nav-item">
                 <Link className="nav-link" to="/health">
-                  health
+                  Health
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/science">
-                  science
+                  Science
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/sports">
-                  sports
+                  Sports
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/technology">
-                  technology
+                  Technology
                 </Link>
               </li>
             </ul>
