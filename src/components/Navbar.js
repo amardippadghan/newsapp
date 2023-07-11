@@ -28,32 +28,35 @@ export class Navbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/entertainment">
+                <Link className="nav-link" to="/entertainment" target="_blank">
                   Entertainment
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/health">
+                <Link className="nav-link" to="/health " target="_blank">
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/science">
+                <Link className="nav-link" to="/science" target="_blank">
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sports">
+                <Link className="nav-link" to="/sports" target="_blank">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/technology">
+                <Link className="nav-link" to="/technology" target="_blank">
                   Technology
                 </Link>
               </li>
             </ul>
+            <button className="btn btn-light btn-lg float-right" type="submit">
+              Dark mode
+            </button>
           </div>
         </nav>
       </div>

@@ -4,9 +4,9 @@ import React, { Component } from "react";
 import { Navbar } from "./components/Navbar";
 import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
 
 export default class App extends Component {
+  pageSize = 15;
   render() {
     return (
       <div>
@@ -15,14 +15,24 @@ export default class App extends Component {
           <Routes>
             <Route
               path="/"
-              element={<News pageSize={6} country="in" category="general" />}
+              element={
+                <News
+                  pageSize={this.pageSize}
+                  country="in"
+                  category="general"
+                />
+              }
             />
 
             <Route
               path="/business"
               element={
                 <>
-                  <News pageSize={6} country="in" category="businees" />
+                  <News
+                    pageSize={this.pageSize}
+                    country="in"
+                    category="businees"
+                  />
                 </>
               }
             />
@@ -31,7 +41,11 @@ export default class App extends Component {
               path="/science"
               element={
                 <>
-                  <News pageSize={6} country="in" category="science" />
+                  <News
+                    pageSize={this.pageSize}
+                    country="in"
+                    category="science"
+                  />
                 </>
               }
             />
@@ -40,7 +54,11 @@ export default class App extends Component {
               path="/health"
               element={
                 <>
-                  <News pageSize={6} country="in" category="health" />
+                  <News
+                    pageSize={this.pageSize}
+                    country="in"
+                    category="health"
+                  />
                 </>
               }
             />
@@ -49,7 +67,11 @@ export default class App extends Component {
               path="/entertainment"
               element={
                 <>
-                  <News pageSize={6} country="in" category="entertainment" />
+                  <News
+                    pageSize={this.pageSize}
+                    country="in"
+                    category="entertainment"
+                  />
                 </>
               }
             />
@@ -58,7 +80,11 @@ export default class App extends Component {
               path="/sports"
               element={
                 <>
-                  <News pageSize={6} country="in" category="sports" />
+                  <News
+                    pageSize={this.pageSize}
+                    country="in"
+                    category="sports"
+                  />
                 </>
               }
             />
@@ -67,7 +93,11 @@ export default class App extends Component {
               path="/technology"
               element={
                 <>
-                  <News pageSize={6} country="in" category="technology" />
+                  <News
+                    pageSize={this.pageSize}
+                    country="in"
+                    category="technology"
+                  />
                 </>
               }
             />
