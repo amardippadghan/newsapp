@@ -7,7 +7,7 @@ export class NewsItem extends Component {
 
     return (
       <div className="my-3">
-        <span class="badge badge-pill badge-danger">source : {source}</span>
+        <span className="badge badge-pill badge-danger">source : {source}</span>
         <div className="card">
           <img
             src={
@@ -29,7 +29,9 @@ export class NewsItem extends Component {
             >
               Read more
             </a>
-            <p className="card-text">published by {author}</p>
+            <p className="card-text">
+              published by {!author ? "Unknown" : author}
+            </p>
 
             <p className="card-text">on {new Date(date).toGMTString()}</p>
           </div>
